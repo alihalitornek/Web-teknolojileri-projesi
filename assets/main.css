@@ -11,3 +11,10 @@ header{
 nav{
     height: 6rem;
 }
+.resimortala {
+    display: flex;
+    justify-content: center;
+}
+.yazıortala {
+    text-align: justify;
+}
