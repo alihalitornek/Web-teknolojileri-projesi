@@ -18,3 +18,15 @@ nav{
 .yazıortala {
     text-align: justify;
 }
+footer {
+    background-color: whitesmoke;
+    text-align: center;
+}
+.sosyalmedya a {
+    color: #333;
+    font-size: 24px;
+    margin: 10px;
+}
+.sosyalmedya a:hover {
+    color: #007bff;
+}
