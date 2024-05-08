@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ali halit örnek</title>
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/132fa15d14.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="container-fluid bg-info">
+  <header class="sticky-top row">
+    <nav class="navbar navbar-expand-lg bg-success">
+      <div class="col-6 col-lg-3">
+        <a class="navbar-brand" href="index.html">
+          <img class="logo img-fluid" src="assets/pictures/yatay1logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="col-3 col-lg-5 mx-auto order-3 order-lg-2 d-flex justify-content-end">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Hakkında</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sehrim.html">Şehrim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.google.com/">Mirasımız</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.google.com/">İlgi alanlarım</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-3 col-lg-2 order-2 order-lg-3 d-flex justify-content-center">
+        <a href="https://www.google.com/" class="btn btn-primary">Giriş Yap</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article class="row yazıgolge">
+      <section class="slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                   <a href="#kale"> <img src="assets/pictures/zilekalesi.jpg" class="d-block w-100" alt="..."></a>
+                   <div class="carousel-caption d-none d-md-block">
+                    <h5>Zile Kalesi</h5>
+                    <p>Zile Kalesi</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#hamam"><img src="assets/pictures/Taceddin-İbrahim-Paşa-Hamamı.jpg" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Taceddin İbrahim Paşa Hamamı ve Boyacı Hasan Ağa Cami</h5>
+                      <p>Cami ve Hamamlar</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#konak"><img src="assets/pictures/amasya-caddesi.jpg" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Amasya Caddesi</h5>
+                      <p>Konaklar ve Zile Evleri</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                  <a href="#yemek">  <img src="assets/pictures/bat.jpg" class="d-block w-100" alt="..."></a>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Zile Batı</h5>
+                    <p>Zile Yemekleri ve Bağları</p>
+                  </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+      <section class="arkaplan row my-4 rounded" id="kale">
+        <div class="col-12 col-md-4">
+          <img src="assets/pictures/zilekalesi1.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-12 col-md-8">
+          <h5 class="display-6">Zile Kalesi</h5>
+          <p>Zile ile ilçe merkezinde yer alan Zile Kalesi antik çağlarda kurulmuş, bir höyüğün üzerine inşa edilmiş akropol özelliğine sahip, Roma Kalesidir. İlçe merkezinin tam ortasında bulunması nedeniyle şehrin her yerinden görülebilmektedir. Kale içerisinde işlevini yitirmiş saat kulesi ile diğer kalıntıları görebilmek mümkündür. Ayrıca kalenin su sarnıcı belediye tarafından açılarak orijinal durumuna getirilmiştir. Kalenin kuzey-doğusundaki kayalıklara oyulmuş Roma Dönemine ait küçük bir tiyatro da yer almaktadır. Ünlü Kumandan J. Sezar’ın yaptığı savaş sonucunda söylediği ve “Veni Vidi Vici” (Geldim Gördüm Yendim) sözünün Zile Kalesinde söylendiği rivayet edilmektedir. M.Ö. 47’de Zile önlerinde yapılan üçüncü savaşı kazanan İmparator Jül Sezar, bu sevincini “Veni-Vidi-Vici” yani “Geldim- Gördüm-Yendim”  sözleriyle Roma’ya müjdelemiştir.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="assets/pictures/zilekalesi2.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="assets/pictures/tiyatro.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="assets/pictures/zilekalesi4.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+      </section>
+      <section class="arkaplan2 row mb-4 rounded" id="hamam">
+        <div class="col-12 col-md-4">
+          <img src="assets/pictures/elbasoglu-cami.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-12 col-md-8">
+          <h5 class="display-6">Cami ve Hamamlar</h5>
+          <p>
+            Taceddin İbrahim Paşa Cami, Taceddin İbrahim Paşa tarafından H.900 (M.1494) tarihinden önce inşa ettirilen hamam, günümüzde "Belediye Hamamı" olarak bilinir. 1939 depreminde ciddi hasar gören hamam, 1947'de Zile Belediyesi tarafından restore edilmiştir. Doğu-batı doğrultusunda dikdörtgen bir plana sahip olan hamamda, güney bölümü erkekler için, kuzey bölümü ise kadınlar için ayrılmıştır. Her iki bölümde de soyunmalık, ılıklık, sıcaklık ve halvet hücreleri bulunmaktadır. Yapının planı simetrik olmamakla birlikte, su haznesi ortak kullanılmaktadır. Malzeme olarak moloz taş ve tuğla kullanılmış, kubbelerin dış yüzeyleri çimento ile sıvanmıştır. Hamamın kuzey cephesine daha sonra dükkanlar eklenmiştir.
+          </p><br>
+          <p>
+            Boyacı Hasan Ağa cami ve mektepi, H.903 (M.1497) yılında Hacı Ali Bin Sultan Hoca tarafından inşa ettirilmiştir. Yapı, 1640 yılında Boyacı Hasan Ağa tarafından tamir edilmiş ve bu tarihten sonra bu isimle anılmaya başlanmıştır. Kare planlı, tek kubbeli olan caminin orijinalinde üç bölümlü son cemaat yeri bulunmaktayken günümüze ulaşmamıştır. Cami, eğimli bir alanda kurulmuş olup, dıştan alaturka kiremitle örtülüdür. Güney duvarına bitişik olarak yapılmış mektep, kare planlıdır ve tromp geçişli kubbeyle örtülüdür. Caminin harimi tek kubbelidir, mihrap stalaktiklerle süslüdür ve giriş kapısı tipik Osmanlı devrine özgüdür.
+          </p><br>
+          <p>
+            Yeni hamam, halk arasında "Kuşlu Hamam" olarak bilinir, çünkü doğu cephesinde bir kuş evi bulunur. Kesin inşa tarihi ve banisi bilinmemekle birlikte, Evliya Çelebi'nin Seyahatnamesinde bahsettiği Paşa Hamamı olabileceği düşünülmektedir. Hamam, kuzey-güney doğrultusunda uzanan, dört eyvanlı ve köşe halvetli plan tipindedir. Soyunmalık, soğukluk, sıcaklık ve su deposu bölümlerinden oluşur. Yapıda moloz taş ve tuğla kullanılmış, kubbeler alaturka kiremit ile örtülmüş ve kasnakları kirpi saçakla sonlanmıştır.
+          </p>
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="assets/pictures/Zile-Nasuh-Paşa-(Ulu Camii).jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="assets/pictures/kus-sarayi.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="assets/pictures/Yeni-Hamam.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+      </section>
+      <section class="arkaplan3 row mb-4 rounded" id="konak">
+        <div class="col-md-4">
+          <img src="assets/pictures/Zerve-Butik-Otel.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-md-8">
+          <h5 class="display-6">Konaklar ve Zile Evleri</h5>
+          <p>Tarihi Türk evleri deyince akla genellikle Safranbolu gelir. Oysa Zile’de iki Safranbolu olacak kadar; 3500 e yakın tarihi Türk evi vardır. Anadolu’da tarihi doku anlamında bozulmamış tarihi sokak dokusuna sahip, özgün mimari ve işlemeli ahşap doğramalarıyla geleneksel mimarinin en güzel örnekleri olan, 300 yıllık Zile evlerini bünyesinde bulunduran Amasya Caddesi’ni ve diğer cadde sokaklarını görüp, tarihi dokunun oluşturduğu atmosferi koklamadıysanız ve bu zengin sivil mimari yapıları henüz fotoğraflamadıysanız en güzel Türk evlerini henüz görmemişsiniz demektir. Zile sokaklarını gezerken kendinizi adeta bir Osmanlı sokağında hissedebilirsiniz. Bu tarihi dokuya yeniden hayat verme çalışmaları bugün de devam ediyor.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/pictures/gül-konagi.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/pictures/GAYDAROĞLU-KÜLTÜR-SANAT-KONAĞI.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/pictures/Sepetçi-Sokak.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+      </section>
+      <section class="arkaplan4 row rounded" id="yemek">
+        <div class="col-md-4">
+          <img src="assets/pictures/pekmez.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-md-8">
+          <h5 class="display-6">Zile Yemekleri ve Bağları</h5>
+          <p>Zile bağlarının meşhur olan başlıca şeyleri üzüm bağları, meyve bahçeleri özellikle de pekmezi, leblebisi ve kirazıdır. Zile'de yapılan yerel yiyecek ve içeceklerin sayısı bağ ve bahçelerinde yetişen mahsulat ve kuru bakliyat-tahıl ürünleriyle birlikte oldukça fazladır. Zile'nin yemek kültürünün önemli birer parçası olan şeyler beyaz pekmez, duru pekmez, salça, bez sucuk, pestil, köme, bat, sarma, yaprak salamurası, madımak, çeşitli komposto ve konserveler, leblebi ve kuruyemiş çeşitleridir. Her yıl önemli kültürel etkinlikler gerçekleşir.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/pictures/bez-sucuk.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/pictures/madımak.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/pictures/pekmez-ve-köme.jpg" alt="..." class="img-fluid w-100 rounded">
+        </div>
+      </section>
+      
+
+    </article>
+
+  </main>
+  <footer class="mt-5 py-4">
+    <div class="sosyalmedya">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2024  | Tüm Hakları Saklıdır | Website designed by Ali Halit Örnek</p>
+</footer>
+</body>
+
+</html>

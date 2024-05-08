@@ -2,9 +2,6 @@
     width:15rem;
 
 }
-body{
-    height: 1000px;
-}
 header{
     height: 6rem;
 }
@@ -29,4 +26,43 @@ footer {
 }
 .sosyalmedya a:hover {
     color: #007bff;
+}
+.arkaplan{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("pictures/zilekalesi.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.arkaplan2{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url("pictures/Taceddin-İbrahim-Paşa-Hamamı.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.arkaplan3{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url("pictures/amasya-caddesi.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.arkaplan4{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url("pictures/bat.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.yazıgolge{
+    color: whitesmoke;
+    text-shadow: 2px 2px black;
+    text-align: justify;
+}
+#kale,
+#hamam,
+#konak,
+#yemek {
+    padding-top: 90px;
 }
