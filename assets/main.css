@@ -55,6 +55,15 @@ footer {
     background-position: center;
     background-size: cover;
 }
+.arkaplan5{
+    width: auto;
+    height: 998px;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url("pictures/haciboz-koprusu.jpg");
+    background-position: center;
+    background-size: cover;
+    transform: scaleX(1.016);
+    padding-top: 10rem;
+}
 .yazıgolge{
     color: whitesmoke;
     text-shadow: 2px 2px black;
