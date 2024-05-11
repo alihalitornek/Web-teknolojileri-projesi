@@ -64,27 +64,60 @@
       </div>
     </nav>
   </header>
-  <main class="arkaplan5">
-    <section class="container">
-      <div class="row justify-content-center">
-          <div class="col-12 col-sm-9 col-md-6">
-              <form action="giris-sonrasi.php" method="post">
-                  <div class="my-4">
-                      <label for="email" class="form-label bg-light rounded">Email</label>
-                      <input type="email" class="form-control" name="email" placeholder="b231210385@sakarya.edu.tr">
-                  </div>
-                  <div class="mb-4">
-                      <label for="password" class="form-label bg-light rounded">Şifre</label>
-                      <input type="password" class="form-control" name="password" placeholder="**********">
-                  </div>
-                  <div class="text-center">
-                      <button type="submit" class="btn btn-success">Giriş Yap</button>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </section>
-  
+  <main class="arkaplan6">
+  <div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table mb-3 table-striped">
+                <thead>
+                    <tr class="table-success border-2 border-success">
+                        <th colspan="2" class="text-center">
+                            <h3>Form Bilgileri</h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border-2 border-success">İsminiz</td>
+                        <td class="border-2 border-success">
+                            <?php echo $_POST['isim']; ?>
+                        </td>
+                    </tr>
+                    <tr class="table-success border-2 border-success">
+                        <td class="border-2 border-success">Soyisminiz</td>
+                        <td class="border-2 border-success">
+                            <?php echo $_POST['soyisim']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2 border-success">E-Mail</td>
+                        <td class="border-2 border-success">
+                            <?php echo $_POST['mail']; ?>
+                        </td>
+                    </tr>
+                    <tr class="table-success border-2 border-success">
+                        <td class="border-2 border-success">İstek Tipi</td>
+                        <td class="border-2 border-success">
+                            <?php echo $_POST['istek']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2 border-success">Cinsiyet</td>
+                        <td class="border-2 border-success">
+                            <?php echo $_POST['radio']; ?>
+                        </td>
+                    </tr>
+                    <tr class="table-success border-2 border-success">
+                        <td class="border-2 border-success">Mesajınız</td>
+                        <td class="border-2 border-success">
+                            <?php echo $_POST['mesaj']; ?>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
   </main>
   <footer class="mt-5 py-4">
     <div class="sosyalmedya">

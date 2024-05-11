@@ -53,6 +53,9 @@
             <li class="nav-item">
               <a class="nav-link" href="https://www.google.com/">İlgi alanlarım</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
           </ul>
         </div>
       </div>

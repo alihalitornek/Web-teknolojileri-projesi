@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ali halit örnek</title>
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/132fa15d14.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body class="container-fluid bg-info">
+  <header class="sticky-top row">
+    <nav class="navbar navbar-expand-lg bg-success">
+      <div class="col-6 col-lg-3">
+        <a class="navbar-brand" href="index.html">
+          <img class="logo img-fluid" src="assets/pictures/yatay1logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="col-3 col-lg-5 mx-auto order-3 order-lg-2 d-flex justify-content-end">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Hakkında</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sehrim.html">Şehrim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.google.com/">İlgi alanlarım</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-3 col-lg-2 order-2 order-lg-3 d-flex justify-content-center">
+        <a href="giris.html" class="btn btn-primary">Giriş Yap</a>
+      </div>
+    </nav>
+  </header>
+  <main class="arkaplan6">
+      <section class="container">
+
+        <form action="iletisim-sonrasi.php" name="Form" onsubmit="return kontrol()" method="POST">
+
+            <div class="form-group my-3">
+                <label class="bg-light mb-2 rounded" for="isim">İsim</label>
+                <input type="text" name="isim" id="isim" class="form-control" placeholder="İsminizi Girin">
+                <span class="form-text bg-light rounded" id="uyari1"></span>
+            </div>
+            <div class="form-group mb-3">
+              <label class="bg-light mb-2 rounded" for="soyisim">Soyisim</label>
+              <input type="text" name="soyisim" id="soyisim" class="form-control" placeholder="Soyisminizi Girin">
+              <span class="form-text bg-light rounded" id="uyari2"></span>
+          </div>
+            <div class="form-group mb-3">
+                <label class="bg-light mb-2 rounded" for="mail">Email</label>
+                <input type="text" name="mail" id="mail" class="form-control" placeholder="Emailinizi Girin">
+                <span class="form-text bg-light rounded" id="uyari3"></span>
+
+            </div>
+            <div class="form-group mb-3">
+              <label class="bg-light mb-2 rounded" for="istek">İleti Tipi</label>
+              <select name="istek" id="istek" class="form-control">
+                <option selected>Lütfen bir seçim yapınız</option>
+                <option>Dilek</option>
+                <option>Şikayet</option>
+                <option>Diğer</option>
+              </select>
+              <span class="form-text bg-light rounded" id="uyari6"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label class="bg-light mb-2 rounded" for="radio">Cinsiyetinizi Seçiniz</label><br>
+                <input class="form-check-input" type="radio" name="radio" value="Erkek"><span class="bg-light ms-2 rounded">Erkek</span><br>
+                <input class="form-check-input" type="radio" name="radio" value="Kadın"><span class="bg-light ms-2 rounded">Kadın</span><br>
+                <span class="form-text bg-light rounded" id="uyari5"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="bg-light mb-2 rounded" for="mesaj">Mesaj</label>
+                <textarea name="mesaj" id="mesaj" rows="5" class="form-control"></textarea>
+                <span class="form-text bg-light rounded" id="uyari4"></span>
+            </div>
+            <button class="btn btn-success" type="reset" id="reset" name="reset" value="Reset"
+                onclick="check()">Temizle</button>
+
+            <button class="btn btn btn-success" type="submit" name="gonder" id="sub">Gönder</button>
+
+        </form>
+
+    </section>
+    <script type="text/javascript">
+      function check(){
+        document.getElementById("uyari1").innerHTML = "";
+        document.getElementById("uyari2").innerHTML = "";
+        document.getElementById("uyari3").innerHTML = "";
+        document.getElementById("uyari4").innerHTML = "";
+        document.getElementById("uyari5").innerHTML = "";
+        document.getElementById("uyari6").innerHTML = "";
+      }
+      function kontrol() {
+          var ad = document.getElementById("isim").value;
+          var soyad = document.getElementById("soyisim").value;
+          var email = document.getElementById("mail").value;
+          var msj = document.getElementById("mesaj").value;
+          var iste = document.getElementById("istek").value;
+          var etindex = email.indexOf("@");
+          var noktaindex = email.lastIndexOf(".");
+          var uyr1 = document.getElementById("uyari1");
+          var uyr2 = document.getElementById("uyari2");
+          var uyr3 = document.getElementById("uyari3");
+          var uyr4 = document.getElementById("uyari4");
+          var uyr5 = document.getElementById("uyari5");
+          var uyr6 = document.getElementById("uyari6");
+          var radyo = document.getElementsByName("radio");
+          var isimdogrumu = true;
+          var soyisimdogrumu = true;
+          var epostadogrumu = true;
+          var istekdogrumu = true;
+          var mesajdogrumu = true;
+          var butondogrumu = true;
+          if (ad == "") {
+              uyr1.innerHTML = "*İsim boş olamaz";
+              uyr1.style.color = "red";
+              isimdogrumu = false;
+          }
+          else{
+              uyr1.innerHTML = "";
+          }
+
+          if (soyad== "") {
+              uyr2.innerHTML = "*Soyisim boş olamaz";
+              uyr2.style.color = "red";
+              soyisimdogrumu = false;
+          }
+          else{
+              uyr2.innerHTML = "";
+          }
+          if (etindex < 1 || noktaindex < etindex + 2 || noktaindex + 3 > email.length || etindex != email.lastIndexOf("@")) {
+              uyr3.innerHTML = "*Geçerli email adresi girin";
+              uyr3.style.color = "red";
+              epostadogrumu = false;
+          }
+          else{
+              uyr3.innerHTML = "";
+          }
+          if (iste == "Lütfen bir seçim yapınız") {
+              uyr6.innerHTML = "*Lütfen bir seçim yapınız";
+              uyr6.style.color = "red";
+              istekdogrumu = false;
+          }
+          else{
+            uyr6.innerHTML = "";
+          }
+          if (radyo[0].checked == false && radyo[1].checked == false){
+              uyr5.innerHTML = "*Lütfen seçim yapın";
+              uyr5.style.color = "red";
+              butondogrumu = false;
+          }
+          else{
+              uyr5.innerHTML = "";
+          }
+          if (msj.length <= 10) {
+              uyr4.innerHTML = "*Mesaj minimum 10 karakter olmalı";
+              uyr4.style.color = "red";
+              mesajdogrumu = false;
+          }
+          else{
+              uyr4.innerHTML = "";
+          }
+          
+          return isimdogrumu && soyisimdogrumu && epostadogrumu && istekdogrumu && mesajdogrumu && butondogrumu;
+
+      }
+  </script>
+</main>
+
+  <footer class="mt-5 py-4">
+    <div class="sosyalmedya">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2024  | Tüm Hakları Saklıdır | Website designed by Ali Halit Örnek</p>
+</footer>
+</body>
+
+</html>
