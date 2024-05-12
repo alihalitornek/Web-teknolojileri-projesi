@@ -1,5 +1,5 @@
 .logo{
-    width:15rem;
+    width:20rem;
 
 }
 header{
@@ -83,4 +83,13 @@ footer {
 #konak,
 #yemek {
     padding-top: 90px;
+}
+.carpi{
+    margin-left: 30rem;
+}
+.navrenk{
+    background-color: #198754;
+}
+.navrenk:hover{
+    background-color: #147b4b;
 }

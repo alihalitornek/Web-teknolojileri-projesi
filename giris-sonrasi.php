@@ -25,44 +25,75 @@
 </head>
 
 <body class="container-fluid bg-info">
-  <header class="sticky-top row">
+<header class="sticky-top row">
     <nav class="navbar navbar-expand-lg bg-success">
-      <div class="col-6 col-lg-3">
-        <a class="navbar-brand" href="index.html">
-          <img class="logo img-fluid" src="assets/pictures/yatay1logo.png" alt="logo">
-        </a>
+      <div class="container">
+          <a class="navbar-brand" href="index.html">
+              <img class="logo img-fluid" src="assets/pictures/logo.png" alt="logo">
+          </a>
+          <button class="navbar-toggler bg-primary" id="navbuton" type="button" data-bs-toggle="collapse" data-bs-target="#menu" onclick="xgorun()">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-success" id="menu">
+              <ul class="navbar-nav mx-auto my-2">
+                <div id="carp" class="carpi"><button class="btn btn-success rounded-circle" id="xbuton" display="none" style="color: #198754;" onclick="navgizle(),xgizle()">X</button></div>
+                  <li class="nav-item navrenk">
+                      <a class="nav-link" href="index.html">Hakkında</a>
+                  </li>
+                  <li class="nav-item active navrenk">
+                      <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                  </li>
+                  <li class="nav-item navrenk">
+                      <a class="nav-link" href="sehrim.html">Şehrim</a>
+                  </li>
+                  <li class="nav-item navrenk">
+                      <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+                  </li>
+                  <li class="nav-item navrenk">
+                      <a class="nav-link" href="https://www.google.com/">İlgi alanlarım</a>
+                  </li>
+                  <li class="nav-item navrenk">
+                      <a class="nav-link" href="iletisim.html">İletişim</a>
+                  </li>
+              </ul>
+              <a href="giris.html" class="btn btn-primary ms-auto">Giriş Yap <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i></a>
+          </div>
       </div>
-      <div class="col-3 col-lg-5 mx-auto order-3 order-lg-2 d-flex justify-content-end">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav">
-            <li class="nav-item ">
-              <a class="nav-link" href="index.html">Hakkında</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sehrim.html">Şehrim</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.google.com/">İlgi alanlarım</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-3 col-lg-2 order-2 order-lg-3 d-flex justify-content-center">
-        <a href="giris.html" class="btn btn-primary">Giriş Yap</a>
-      </div>
-    </nav>
+  </nav>
+  
+    <script type="text/javascript">
+        window.onload = function(){ xgizle(); };
+        window.onresize = function(){ xgizle2(); };
+        function xgorun(){
+          var buton = document.getElementById("xbuton");
+          buton.style.display = "block";
+          buton.style.background = "#f00";
+          buton.style.color = "#fff";
+          document.getElementById("carp").classList.add("carpi");
+        }
+        function xgizle(){
+          var buton = document.getElementById("xbuton");
+          buton.style.display = "none";
+          document.getElementById("carp").classList.remove("carpi");
+        }
+        function xgizle2(){
+          var buton = document.getElementById("xbuton");
+          if (window.innerWidth > 992){
+            buton.style.display = "none";
+            document.getElementById("carp").classList.remove("carpi");
+          }
+          else{
+            buton.style.display = "block";
+            document.getElementById("carp").classList.add("carpi");
+          }
+          
+        }
+        function navgizle(){
+          document.getElementById("menu").classList.remove("show");
+        }
+    </script>
+  
+  
   </header>
   <main class="arkaplan5">
   <?php
