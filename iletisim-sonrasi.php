@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ali halit örnek</title>
+  <title>İletişim Sonrası</title>
   <link rel="stylesheet" href="assets/bootstrap.min.css">
   <script src="https://kit.fontawesome.com/132fa15d14.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"

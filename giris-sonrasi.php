@@ -1,10 +1,27 @@
+<?php
+include("kullanici.php");
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+if (!empty($email) && !empty($password)) {
+    if ($email == $dogrueposta && $password == $dogrusifre) {
+        $message = "<div class='bg-light my-5'><h3 class='text-primary text-center'>Hoşgeldiniz “b231210385”</h3></div>";
+    } else {
+        $message = "<div class='bg-light my-5'><h3 class='text-primary text-center'>Kullanıcı adı veya şifre yanlış</h3></div>";
+        header("Refresh: 2; url=giris.html");
+    }
+} else {
+    $message = "<div class='bg-light my-5'><h3 class='text-primary text-center'>Kullanıcı adı veya şifre boş bırakılamaz</h3></div>";
+    header("Refresh: 2; url=giris.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="tr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ali halit örnek</title>
+  <title>Giriş Sonrası</title>
   <link rel="stylesheet" href="assets/bootstrap.min.css">
   <script src="https://kit.fontawesome.com/132fa15d14.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -61,7 +78,23 @@
       </div>
   </nav>
   
-    <script type="text/javascript">
+   
+  
+  
+  </header>
+  <main class="arkaplan5">
+    <?php echo $message; ?>
+  </main>
+  <footer class="mt-5 py-4">
+    <div class="sosyalmedya">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/alihalitornek"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2024  | Tüm Hakları Saklıdır | Website designed by Ali Halit Örnek</p>
+</footer>
+<script type="text/javascript">
         window.onload = function(){ xgizle(); };
         window.onresize = function(){ xgizle2(); };
         function xgorun(){
@@ -92,40 +125,6 @@
           document.getElementById("menu").classList.remove("show");
         }
     </script>
-  
-  
-  </header>
-  <main class="arkaplan5">
-  <?php
-
-include("kullanici.php");
-$email = $_POST['email'];
-$password = $_POST['password'];
-
-if (!empty($email) && !empty($password)) {
-    if ($email == $dogrueposta && $password == $dogrusifre) {
-        echo "<div class='bg-light my-5'><h3 class='text-primary text-center'>Hoşgeldiniz “b231210385”</h3></div>";
-    }
-    else {
-        echo "<div class='bg-light my-5'><h3 class='text-primary text-center'>Kullanıcı adı veya şifre yanlış</h3></div>";
-        header("Refresh: 2; url=giris.html");
-    }
-} 
-else {
-    echo "<div class='bg-light my-5'><h3 class='text-primary text-center'>Kullanıcı adı veya şifre boş bırakılamaz</h3></div>";
-    header("Refresh: 2; url=giris.html");
-}
-?>
-  </main>
-  <footer class="mt-5 py-4">
-    <div class="sosyalmedya">
-        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/alihalitornek"><i class="fab fa-github"></i></a>
-    </div>
-    <p>&copy; 2024  | Tüm Hakları Saklıdır | Website designed by Ali Halit Örnek</p>
-</footer>
 </body>
 
 </html>
