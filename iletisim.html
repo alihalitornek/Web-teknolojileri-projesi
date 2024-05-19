@@ -96,152 +96,64 @@
   
   
   </header>
-  <main class="arkaplan6">
-      <section class="container">
+  <main class="arkaplan6" id="app">
+    <section class="container">
 
-        <form action="iletisim-sonrasi.php" name="Form" onsubmit="return kontrol()" method="POST">
-
-            <div class="form-group my-3">
-                <label class="bg-light mb-2 rounded" for="isim">İsim</label>
-                <input type="text" name="isim" id="isim" class="form-control" placeholder="İsminizi Girin">
-                <span class="form-text bg-light rounded" id="uyari1"></span>
-            </div>
-            <div class="form-group mb-3">
-              <label class="bg-light mb-2 rounded" for="soyisim">Soyisim</label>
-              <input type="text" name="soyisim" id="soyisim" class="form-control" placeholder="Soyisminizi Girin">
-              <span class="form-text bg-light rounded" id="uyari2"></span>
+      <form @submit.prevent="submit">
+          <div class="form-group my-3">
+              <label class="bg-light mb-2 rounded" for="isim">İsim</label>
+              <input type="text" v-model="form.isim" class="form-control" placeholder="İsminizi Girin">
+              <span class="form-text bg-light rounded" v-if="errors.isim">{{ errors.isim }}</span>
           </div>
-            <div class="form-group mb-3">
-                <label class="bg-light mb-2 rounded" for="mail">Email</label>
-                <input type="text" name="mail" id="mail" class="form-control" placeholder="Emailinizi Girin">
-                <span class="form-text bg-light rounded" id="uyari3"></span>
-
-            </div>
-            <div class="form-group mb-3">
-              <label class="bg-light mb-2 rounded" for="istek">İleti Tipi</label>
-              <select name="istek" id="istek" class="form-control">
-                <option selected>Lütfen bir seçim yapınız</option>
-                <option>Dilek</option>
-                <option>Şikayet</option>
-                <option>Diğer</option>
-              </select>
-              <span class="form-text bg-light rounded" id="uyari6"></span>
-            </div>
-            
-            <div class="form-group mb-3">
-                <label class="bg-light mb-2 rounded" for="radio">Cinsiyetinizi Seçiniz</label><br>
-                <input class="form-check-input" type="radio" name="radio" value="Erkek"><span class="bg-light ms-2 rounded">Erkek</span><br>
-                <input class="form-check-input" type="radio" name="radio" value="Kadın"><span class="bg-light ms-2 rounded">Kadın</span><br>
-                <span class="form-text bg-light rounded" id="uyari5"></span>
-            </div>
-            <div class="form-group mb-3">
-                <label class="bg-light mb-2 rounded" for="mesaj">Mesaj</label>
-                <textarea name="mesaj" id="mesaj" rows="5" class="form-control"></textarea>
-                <span class="form-text bg-light rounded" id="uyari4"></span>
-            </div>
-            <button class="btn btn-success" type="reset" id="reset" name="reset" value="Reset"
-                onclick="check()">Temizle</button>
-
-            <button class="btn btn btn-success" type="submit" name="gonder" id="sub">Gönder</button>
-
-        </form>
-
-    </section>
-    <script type="text/javascript">
-      function check(){
-        document.getElementById("uyari1").innerHTML = "";
-        document.getElementById("uyari2").innerHTML = "";
-        document.getElementById("uyari3").innerHTML = "";
-        document.getElementById("uyari4").innerHTML = "";
-        document.getElementById("uyari5").innerHTML = "";
-        document.getElementById("uyari6").innerHTML = "";
-      }
-      function kontrol() {
-          var ad = document.getElementById("isim").value;
-          var soyad = document.getElementById("soyisim").value;
-          var email = document.getElementById("mail").value;
-          var msj = document.getElementById("mesaj").value;
-          var iste = document.getElementById("istek").value;
-          var etindex = email.indexOf("@");
-          var noktaindex = email.lastIndexOf(".");
-          var uyr1 = document.getElementById("uyari1");
-          var uyr2 = document.getElementById("uyari2");
-          var uyr3 = document.getElementById("uyari3");
-          var uyr4 = document.getElementById("uyari4");
-          var uyr5 = document.getElementById("uyari5");
-          var uyr6 = document.getElementById("uyari6");
-          var radyo = document.getElementsByName("radio");
-          var isimdogrumu = true;
-          var soyisimdogrumu = true;
-          var epostadogrumu = true;
-          var istekdogrumu = true;
-          var mesajdogrumu = true;
-          var butondogrumu = true;
-          if (ad == "") {
-              uyr1.innerHTML = "*İsim boş olamaz";
-              uyr1.style.color = "red";
-              isimdogrumu = false;
-          }
-          else{
-              uyr1.innerHTML = "";
-          }
-
-          if (soyad== "") {
-              uyr2.innerHTML = "*Soyisim boş olamaz";
-              uyr2.style.color = "red";
-              soyisimdogrumu = false;
-          }
-          else{
-              uyr2.innerHTML = "";
-          }
-          if (etindex < 1 || noktaindex < etindex + 2 || noktaindex + 3 > email.length || etindex != email.lastIndexOf("@")) {
-              uyr3.innerHTML = "*Geçerli email adresi girin";
-              uyr3.style.color = "red";
-              epostadogrumu = false;
-          }
-          else{
-              uyr3.innerHTML = "";
-          }
-          if (iste == "Lütfen bir seçim yapınız") {
-              uyr6.innerHTML = "*Lütfen bir seçim yapınız";
-              uyr6.style.color = "red";
-              istekdogrumu = false;
-          }
-          else{
-            uyr6.innerHTML = "";
-          }
-          if (radyo[0].checked == false && radyo[1].checked == false){
-              uyr5.innerHTML = "*Lütfen seçim yapın";
-              uyr5.style.color = "red";
-              butondogrumu = false;
-          }
-          else{
-              uyr5.innerHTML = "";
-          }
-          if (msj.length <= 10) {
-              uyr4.innerHTML = "*Mesaj minimum 10 karakter olmalı";
-              uyr4.style.color = "red";
-              mesajdogrumu = false;
-          }
-          else{
-              uyr4.innerHTML = "";
-          }
+          <div class="form-group mb-3">
+            <label class="bg-light mb-2 rounded" for="soyisim">Soyisim</label>
+            <input type="text" v-model="form.soyisim" class="form-control" placeholder="Soyisminizi Girin">
+            <span class="form-text bg-light rounded" v-if="errors.soyisim">{{ errors.soyisim }}</span>
+          </div>
+          <div class="form-group mb-3">
+              <label class="bg-light mb-2 rounded" for="mail">Email</label>
+              <input type="text" v-model="form.email" class="form-control" placeholder="Emailinizi Girin">
+              <span class="form-text bg-light rounded" v-if="errors.email">{{ errors.email }}</span>
+          </div>
+          <div class="form-group mb-3">
+            <label class="bg-light mb-2 rounded" for="istek">İleti Tipi</label>
+            <select v-model="form.istek" class="form-control">
+              <option selected>Lütfen bir seçim yapınız</option>
+              <option>Dilek</option>
+              <option>Şikayet</option>
+              <option>Diğer</option>
+            </select>
+            <span class="form-text bg-light rounded" v-if="errors.istek">{{ errors.istek }}</span>
+          </div>
           
-          return isimdogrumu && soyisimdogrumu && epostadogrumu && istekdogrumu && mesajdogrumu && butondogrumu;
+          <div class="form-group mb-3">
+              <label class="bg-light mb-2 rounded" for="radio">Cinsiyetinizi Seçiniz</label><br>
+              <input class="form-check-input" type="radio" value="Erkek" v-model="form.cinsiyet" /><span class="bg-light ms-2 rounded">Erkek</span><br>
+              <input class="form-check-input" type="radio" value="Kadın" v-model="form.cinsiyet" /><span class="bg-light ms-2 rounded">Kadın</span><br>
+              <span class="form-text bg-light rounded" v-if="errors.cinsiyet">{{ errors.cinsiyet }}</span>
+          </div>
+          <div class="form-group mb-3">
+              <label class="bg-light mb-2 rounded" for="mesaj">Mesaj</label>
+              <textarea v-model="form.mesaj" rows="5" class="form-control"></textarea>
+              <span class="form-text bg-light rounded" v-if="errors.mesaj">{{ errors.mesaj }}</span>
+          </div>
+          <button class="btn btn-success" type="reset" @click="resetForm">Temizle</button>
+          <button class="btn btn btn-success" type="submit">Gönder</button>
+      </form>
 
-      }
-  </script>
+  </section>
 </main>
 
-  <footer class="mt-5 py-4">
-    <div class="sosyalmedya">
-        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/alihalitornek"><i class="fab fa-github"></i></a>
-    </div>
-    <p>&copy; 2024  | Tüm Hakları Saklıdır | Website designed by Ali Halit Örnek</p>
+<footer class="mt-5 py-4">
+  <div class="sosyalmedya">
+      <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/alihalitornek"><i class="fab fa-github"></i></a>
+  </div>
+  <p>&copy; 2024 Ali Halit Örnek | Tüm Hakları Saklıdır | Website designed by Ali Halit Örnek</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="assets/main.js"></script>
 </body>
-
 </html>

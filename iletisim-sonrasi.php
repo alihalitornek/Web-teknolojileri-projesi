@@ -123,7 +123,7 @@
                     <tr>
                         <td class="border-2 border-success">E-Mail</td>
                         <td class="border-2 border-success">
-                            <?php echo $_POST['mail']; ?>
+                            <?php echo $_POST['email']; ?>
                         </td>
                     </tr>
                     <tr class="table-success border-2 border-success">
@@ -135,7 +135,7 @@
                     <tr>
                         <td class="border-2 border-success">Cinsiyet</td>
                         <td class="border-2 border-success">
-                            <?php echo $_POST['radio']; ?>
+                            <?php echo $_POST['cinsiyet']; ?>
                         </td>
                     </tr>
                     <tr class="table-success border-2 border-success">
